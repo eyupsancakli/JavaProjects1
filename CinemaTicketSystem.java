@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 import Java.util.*:
 public class CinemaTicketSystem 
 {
@@ -36,15 +38,50 @@ public class CinemaTicketSystem
         double TicketPrice =0.00;
         double SnackPrice = 0.00; 
 
+        double ticketTotal, snackTotal, discount, subTotal, vat, finalTotal;
+
+
         // Validation of the Ticket Type with Do-While Loop
         do
         {
             System.out.println("Please Enter Your Ticket Type,A=Adult, C=Child, S=Senior, ");
-            customerType = keyboardIn.next().char(0);
+            ticketType = keyboardIn.next().char(0);
             
             //invalid entry message //
-            if(customerType !=)
+            if(ticketType != 'C' && ticketType != 'c'&&
+                ticketType != 'A' && ticketType != 'a' &&
+                ticketType != 'S' && ticketType != 's'
+            );
+            {
+                System.out.println("Invalid ticket type please re-enter your ticket type!!");
+
+            }
         }
+
+        while(ticketType != 'C' && ticketType != 'c' &&
+            ticketType != 'A' && ticketType != 'a' &&
+            ticketType != 'S' && ticketType != 's');
+
+        //Number of Tickets
+        do 
+        {
+            System.out.println("Enter number of tickets: ");
+            numTicket =keyboardIn.nextInt();
+
+            if(numTicket <= 0)
+            {
+                System.out.println("Invalid Number! Must be more than 1");
+
+            }
+
+        }
+            while(numTicket<=0);
+
+            do
+            {
+                System.out.print("Snack optins P=Popcorn, N=None):");
+                snackOption =keyboardIn.next().charAt(0);
+            }
 
 
     
